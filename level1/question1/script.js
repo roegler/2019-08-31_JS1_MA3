@@ -1,26 +1,38 @@
 //Use RegEx to validate form
-
-function validateEmail(value) {
-    var emailexpression = /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    var phoneNumberExpresion = /^[0-9]{8}$/;
-}
-
 function submitFormButtonPressed() {
-    var email = "" // Get this from the form input somehow...
-    var emailExpression = /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var firstName = document.myForm.firstName.value;
+    var lastName = document.myForm.lastName.value;
+    var email = document.myForm.email.value;
+    var phone = document.myForm.phone.value;
 
-    var isEmailValid = emailExpression.test(email);
+    console.log(firstName, lastName, email, phone);
 
-    if (isEmailValid === false) {
-        // Not valid email - tell the user.. abort abort!!
-        return
+    if (firstName == "") {
+        alert("First name cannot be empty!");
+        return;
     }
 
-    var firstName = "";
+    if (lastName == "") {
+        alert("Last name cannot be empty!");
+        return;
+    }
 
-    var isFirstnameValid = firstName.trim().length > 0;
+    var emailExpression = /^[a-zA-Z0-9.\-_]+@[a-zA-Z0-9.\-_]+\.[a-zA-Z]{2,4}$/;
+    var isEmailValid = emailExpression.test(email);
 
+    if (isEmailValid == false) {
+        alert("Sorry, your email is not valid")
+        return;
+    }
 
+    var phoneNumberExpresion = /^[0-9]{8}$/;
+    var isPhoneNumberValid = phoneNumberExpresion.test(phone);
 
+    if (isPhoneNumberValid == false) {
+        alert("Sorry, your number is not valid")
+        return;
+    }
+
+    // whooo! all is good.
 
 }
