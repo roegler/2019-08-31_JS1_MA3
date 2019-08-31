@@ -3,47 +3,74 @@ JavaScript MA03
 Level 2
 
 1. In your own words, describe what JavaScript Code Style is.
+
 // JS code style is a definition of how the code is styled.
-// how neat it is and readable. To make code readable for yourselfg and other developers
+// how neat it is and readable. To make code readable for yourself and other developers
 // you should be consistent in how you write code. It is also important to indent code
 // so that it will be more readable.
 
+
 2. What is a Regular Expression?
+
 // Regex are patterns that can be preformed on strings. 
 // In other words you can say that regular expression 
 // is 'searching' a string for patterns.
 // You can set up a regex by using a forward slash 
 // at the start and end.
 
+
 3. What does the .random() method do?
+
 // This method returns a random number between 0 and 1.
 
+
 4. What does the .sort() method do?
+
 // The sort method is helping you sort items of an array.
 
+
 5. What does the .reverse() method do?
+
 // This method reverses the order of the elements inside an array.
 
-6. List two examples of bad JavaScript code.
-// I found my examples here: https://www.quora.com/What-are-examples-of-bad-programming-style-in-JavaScript
-//example one:
-var Color = 'red';
-var SomeNumber = 234;
-var AnArray = [1,2,3];
-var Foo = { bar: 123 };
-// None of them should start with a capital letter!
 
-//example two:
-var someVar1 = 'a';
-var someVar2 = 'b';
-var someVar3 = 'c';
- 
-// it should be written like this:
-var someVar1 = 'a',
-    someVar2 = 'b',
-    someVar3 = 'c';
+6. List two examples of bad JavaScript code.
+
+//Example one:
+var Brand = 'Mulberry';
+var Producttype = 'purse';
+var Color = 'black';
+
+//none of the variables should start with an uppercase. 'Product type' should be written 
+//like this: productType (the 'p'in product should be lowercase and the 'T' in type
+//should be uppercase.
+
+
+//Example two:
+
+var hours = new Date().getHours();
+    if (hours < 18) {
+        //some code here
+            if (hours >= 16) {
+                //some code here
+                    if (hours < 12) {
+                         //some code here
+                    } else {
+                        //some code here
+                    }
+                } else {
+                    //some code here
+                }
+            } else {
+              //some code here
+        }
+    }    
+}   
+
+//nested if statements are very difficult to read and understand. 
 
 7. What data types can a JSON object contain?
+
 // a string.
 // a number.
 // an object (JSON object)
@@ -51,11 +78,15 @@ var someVar1 = 'a',
 // a boolean.
 // null.
 
+
 8. What is minifying JavaScript Code?
-// minifying is the prosess of removing all unessesarry characters from the code,
-// without changing their functionality. These characters usaly includes white space,
+
+// minifying is the prosess of removing all unnecessary characters from the code,
+// without changing their functionality. These characters usually includes white space,
 // new line characters and comments.
 
+
 9. What is a global variable?
+
 // A global variable is defined outside a function. In other words the variable
 // will be 'available' for all scripts and functions on the web page.
